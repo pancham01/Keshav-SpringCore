@@ -1,12 +1,15 @@
 package com.my.spring.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Employee {
 
 	private int id;
 
 	private String name, gender;
 
-	
 	private Address address;
 
 	public Employee() {
@@ -27,6 +30,7 @@ public class Employee {
 		return address;
 	}
 
+	@Autowired
 	public void setAddress(Address address) {
 		this.address = address;
 		System.out.println("Employee.setAddress()");
